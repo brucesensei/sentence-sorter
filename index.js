@@ -1,26 +1,36 @@
 const express = require("express");
-const server = require("./public/js/server.js");
-
+const fs = require("fs");
 const app = express();
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-// file path to json object => ./public/assets/game_data.json"
-
-server.jsonReader()
 
 app.get("/", function(req, res) {
-  res.render('pages/choices')
+  fs.readFile("./public/assets/game-data.json", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    const myData = JSON.parse(data);
+    console.log(myData);
+
+    res.render("pages/choices", {myData: myData});
+  })
 })
 
 app.post("/", function(req, res) {
-  console.log('implements home post route');
+  console.log("implements the home post route.");
+})
+
+app.get("/form", function(req, res) {
+  res.render("pages/form");
+})
+
+app.post("/form", function(req, res) {
+  console.log("implements the form post route.")
 })
 
 app.listen(process.env.PORT || 3000, function() {
   console.log('server running on port 3000')
 });
-
-
-
-
