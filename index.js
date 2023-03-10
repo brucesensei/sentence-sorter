@@ -13,8 +13,6 @@ app.get("/", function(req, res) {
       return;
     }
     const myData = JSON.parse(data);
-    console.log(myData);
-
     res.render("pages/choices", {myData: myData});
   })
 })

@@ -4,8 +4,25 @@
   
 
   <ul>
-    <% for (let i=0; i<2; i++) { %>
-      <h2><%= Object.keys(myData)[i] %></h2>
+    <% let titles = Object.keys(myData) %>
+    <% for( let i=0; i<titles.length; i++) { %>
+      <p><%= titles[i] %></p>
+
+      <% let units = Object.keys(myData[titles[i]]) %>
+      <% for( let j=0; j<units.length; j++) { %>
+        <P><%= units[j] %></P>
+
+        <% let quizzes = Object.keys(myData[titles[i]][units[j]]) %>
+        <% for ( let k=0; k<quizzes.length; k++) { %>
+          <p><%= quizzes[k] %></p>
+
+          <% let questions = myData[titles[i]][units[j]][quizzes[k]] %>
+          <% for ( let l=0; l<questions.length; l++) { %>
+            <p><%= questions[l] %></p>
+          <% } %>
+        <% } %>
+      <% } %>
     <% } %>
-    
+      
   </ul>
+ 
