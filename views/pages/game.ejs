@@ -1,6 +1,9 @@
   <%- include('../partials/header') %>
   <h1>Hello from the game.</h1>
+  <h1><%= gameGrade %></h1>
+  <h1><%= gameUnit %></h1>
   <h1><%= gameTitle %></h1>
+
 
   <% for (i=0; i<gameData.length; i++) { %>
     <p><%= gameData[i] %></p>

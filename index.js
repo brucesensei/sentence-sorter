@@ -3,6 +3,8 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const app = express();
 
+let gameGrade = '';
+let gameUnit = '';
 let gameTitle = '';
 let gameData = [];
 
@@ -22,13 +24,15 @@ app.get("/", function(req, res) {
 })
  
 app.post("/", function(req, res) {
+  gameGrade = req.body.title;
+  gameUnit = req.body.unit;
   gameTitle = req.body.quiz;
   gameData = req.body.question;
   res.redirect("/game");
 })
 
 app.get("/game", function(req, res) {
-  res.render("pages/game", { gameTitle: gameTitle, gameData: gameData });
+  res.render("pages/game", { gameTitle: gameTitle, gameData: gameData, gameGrade: gameGrade, gameUnit: gameUnit });
 })
 
 app.post("/game", function(req, res) {
