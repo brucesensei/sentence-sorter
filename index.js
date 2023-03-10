@@ -1,10 +1,14 @@
 const express = require("express");
 const fs = require("fs");
+const bodyParser = require("body-parser");
 const app = express();
+
+let gameTitle = '';
+let gameData = [];
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", function(req, res) {
   fs.readFile("./public/assets/game-data.json", "utf8", (err, data) => {
@@ -16,19 +20,21 @@ app.get("/", function(req, res) {
     res.render("pages/choices", {myData: myData});
   })
 })
-
+ 
 app.post("/", function(req, res) {
-  console.log("implements the home post route.");
+  gameTitle = req.body.quiz;
+  gameData = req.body.question;
+  res.redirect("/game");
 })
 
-app.get("/form", function(req, res) {
-  res.render("pages/form");
+app.get("/game", function(req, res) {
+  res.render("pages/game", { gameTitle: gameTitle, gameData: gameData });
 })
 
-app.post("/form", function(req, res) {
-  console.log("implements the form post route.")
+app.post("/game", function(req, res) {
+  console.log("implements game post route.")
 })
 
 app.listen(process.env.PORT || 3000, function() {
   console.log('server running on port 3000')
-});
+})

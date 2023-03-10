@@ -1,28 +1,29 @@
 <%- include('../partials/header') %>
 
-  <h1>Hello from choices</h1>
-  
+  <h1>Sentence Scrambler</h1>
+  <p>Choose a quiz to play or edit.</p>
 
   <ul>
     <% let titles = Object.keys(myData) %>
     <% for( let i=0; i<titles.length; i++) { %>
-      <p><%= titles[i] %></p>
-
+      <h2 class="grade" ><%= titles[i] %></h2>
       <% let units = Object.keys(myData[titles[i]]) %>
       <% for( let j=0; j<units.length; j++) { %>
-        <P><%= units[j] %></P>
-
+        <h2 class="unit" ><%= units[j] %></h2>
         <% let quizzes = Object.keys(myData[titles[i]][units[j]]) %>
         <% for ( let k=0; k<quizzes.length; k++) { %>
-          <p><%= quizzes[k] %></p>
-
-          <% let questions = myData[titles[i]][units[j]][quizzes[k]] %>
-          <% for ( let l=0; l<questions.length; l++) { %>
-            <p><%= questions[l] %></p>
-          <% } %>
+          <form action="/" method="post">
+            <h3><%= quizzes[k] %></h3>
+            <input id="submit" type="submit" value="Select">
+            <input type="hidden" name="quiz" value="<%=quizzes[k]%>">          
+            <% let questions = myData[titles[i]][units[j]][quizzes[k]] %>
+            <% for ( let l=0; l<questions.length; l++) { %>
+              <p><%= questions[l] %></p>
+              <input type="hidden" name="question" value="<%=questions[l]%>">
+              <% } %>
+          </form>
         <% } %>
       <% } %>
     <% } %>
       
   </ul>
- 

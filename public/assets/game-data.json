@@ -11,12 +11,12 @@
   },
   "grade 6": {
     "unit 3": {
-      "quiz 5": ["Howdy"],
+      "quiz 5": ["Howdy", "What is the deal with only one array value in a json file?"],
       "quiz 6": ["I'm great.", "how's the weather?"]
     },
     "unit 4": {
       "quiz 7": ["What is this?", "I like soccer."],
-      "quiz 8": ["I'm from Canada."]
+      "quiz 8": ["I'm from Canada.", "Why does it display each character as a separate entry?"]
     }
   }
 }
