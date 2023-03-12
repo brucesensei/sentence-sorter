@@ -15,6 +15,13 @@
           <form action="/" method="post">
             <h3><%= quizzes[k] %></h3>
             <input id="submit" type="submit" value="Select">
+            <% let option = 'option' + k %>
+            <% let playId = 'play' + k %>
+            <% let editId = 'edit' + k %>
+            <input type="radio" name="option" id="playId"  value="play" checked>
+            <label for="playId">Play</label>
+            <input type="radio" name="option" id="editId"  value="edit">
+            <label for="editId">Edit</label>
             <input type="hidden" name="title" value="<%=titles[i]%>">
             <input type="hidden" name="unit" value="<%=units[j]%>">            
             <input type="hidden" name="quiz" value="<%=quizzes[k]%>">
