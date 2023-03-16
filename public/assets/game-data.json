@@ -1,22 +1,49 @@
 {
   "grade 5": {
     "unit 1": {
-      "quiz 1": ["How do you spell your name?", "My name is Emily", "I live in Kisarazu", "I go to Midori Elementary school."],
-      "quiz 2": ["I am fine", "how are you?"]
+      "quiz 1": [
+        "How do you spell your name?",
+        "My name is Emily.",
+        "I live in Kisarazu!!",
+        "I go to Midori Elementary school."
+      ],
+      "quiz 2": [
+        "I'm fine!!",
+        "how are you?"
+      ]
     },
     "unit 2": {
-      "quiz 3": ["this is a pen.", "I like rice."],
-      "quiz 4": ["she is kind", "what a nice day!"]
+      "quiz 3": [
+        "this is a pen.",
+        "I like rice."
+      ],
+      "quiz 4": [
+        "she is kind",
+        "what a nice day!"
+      ]
     }
   },
-  "grade 6": {
-    "unit 3": {
-      "quiz 5": ["Howdy", "What is the deal with only one array value in a json file?"],
-      "quiz 6": ["I'm great.", "how's the weather?"]
+  "Grade 6": {
+    "Unit 1": {
+      "Quiz 1": [
+        "How do you spell your name?",
+        "What do you want for your birthday?",
+        "I want a yellow T-shirt.",
+        "What sport do you like?"
+      ],
+      "Quiz 2": [
+        "I'm great.",
+        "how's the weather?"
+      ]
     },
-    "unit 4": {
-      "quiz 7": ["What is this?", "I like soccer."],
-      "quiz 8": ["I'm from Canada.", "Why does it display each character as a separate entry?"]
+    "Unit 2": {
+      "Quiz 1": [
+        "What is this?",
+        "I like soccer."],
+      "Quiz 2": [
+        "I'm from Canada.",
+        "Why does it display each character as a separate entry?"
+      ]
     }
   }
 }

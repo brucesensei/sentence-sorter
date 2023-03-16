@@ -1,8 +1,18 @@
-  <%- include('../partials/header') %>
-  <h1>Hello from the game.</h1>
-  <h1><%= gameGrade %>, <%= gameUnit %>, <%= gameTitle %></h1>
+<%- include('../partials/header') %>
 
 
+<div hidden>
   <% for (i=0; i<gameData.length; i++) { %>
-    <p><%= gameData[i] %></p>
-  <% } %>
+    <p class="sentences"><%= gameData[i] %></p>
+    <% } %>
+</div>
+<h1>Sentence Scramble Game</h1>
+<h1><%= gameGrade %>, <%= gameUnit %>, <%= gameTitle %></h1>
+<h2>Question <span id="question-number"></span> of <span id="total-questions"></span>.</h2>
+<div id="question-box-id"></div>
+<button id="check">Check Answer</button>
+<button id="show">Show Answer</button>
+<button id="next" >Next Question</button>
+
+
+<script src="js/client.js"></script>
