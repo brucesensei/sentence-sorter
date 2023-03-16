@@ -1,4 +1,4 @@
-// --------------VARIABLE DECRLARATION AND CREATION OF LIST OF LISTS FOR VALIDATION--------------------
+// --------------VARIABLE DECRLARATIONS--------------------
 
 // Get quiz sentences.
 const sentences = document.getElementsByClassName("sentences");
@@ -13,7 +13,7 @@ const next = document.getElementById("next")
 // Get the question box
 const questionBox = document.getElementById("question-box-id")
 
-// Get the main-game div to append dynamically created elements to.
+// Get the main-game div for appending dynamically created elements.
 const mainGame = document.getElementById("main-game")
 
 // Array of Arrays. Ex: [["I'm", "fine"], ["This", "is", "a", "pen"]] Correct answers
@@ -28,13 +28,13 @@ let dragStartIndex;
 
 // Get total number of questions for the quiz.
 let totalQuestions = sentences.length;
-document.getElementById("total-questions").innerHTML = totalQuestions;
 
 // Set the question number. (also used to advance to the next question)
 let questionNumber = 0;
-document.getElementById("question-number").innerHTML = questionNumber + 1
 
-// Create the list of lists held in validatoinArray.
+
+//----------------CREATE GAME ARRAY OF ARRAYS----------------------------
+
 for (i=0; i<sentences.length; i++) {
   // hold the value of one sentence, change it to lower case and strip off punctuation.
   let sentenceString = sentences[i]
@@ -46,10 +46,19 @@ for (i=0; i<sentences.length; i++) {
   validationArrays.push(validationArray);
 }
 
-// ---------------------CREATE GAME FOR ONLY ONE LIST AT A TIME------------------------------------------
 
+
+//---------------------------MAIN GAME FUNCTION CALL-------------------------
+
+createList();
+
+
+// -------------------MAIN GAME FUNCTION--------------------------------
 
 function createList() {
+  randomArray.length = 0;
+  document.getElementById("total-questions").innerHTML = totalQuestions;
+  document.getElementById("question-number").innerHTML = questionNumber + 1;
   [...validationArrays[questionNumber]]
   .map(a=> ({ value: a, sort: Math.random() }))
   .sort((a, b) => a.sort - b.sort)
@@ -69,6 +78,9 @@ function createList() {
       addEventListeners();
     }
     
+
+//----------------------EVENT LISTENERS---------------------------
+
     function dragStart() {
       dragStartIndex = +this.closest('li').getAttribute('data-index');
     }
@@ -91,6 +103,9 @@ function createList() {
       let dragEndIndex = +this.getAttribute('data-index');
       swapItems(dragStartIndex, dragEndIndex);
     }
+
+
+//---------------------HELPER FUNCTIONS------------------------------
 
 function swapItems(fromIndex, toIndex) {
   const itemOne = randomArray[fromIndex].querySelector('.draggable');
@@ -132,18 +147,22 @@ function addEventListeners() {
 }
 
 
+//--------------------BUTTON-CLICK EVENT LISTENER FUNCITONS-----------------------
+
 function showAnswer () {
-  questionBox.innerHTML = sentences[questionNumber].innerText
-  console.log(sentences[questionNumber])
+  questionBox.innerHTML = sentences[questionNumber].innerText;
 }
 
 function nextQuestion() {
   questionNumber += 1;
-  if (questionNumber <= totalQuestions) {
-    questionBox.innerHTML = "";
+  questionBox.innerHTML = "";
+  console.log('question number: ', questionNumber)
+  console.log('total questions: ', totalQuestions)
+  console.log(questionNumber < totalQuestions)
+  if (questionNumber < totalQuestions) {
     createList();
   } else {
-    questionBox.innerText = "The End"
+    questionBox.innerText = "The End";
   }
 }
 
@@ -154,4 +173,3 @@ show.addEventListener('click', showAnswer);
 
 next.addEventListener('click', nextQuestion);
 
-createList();
