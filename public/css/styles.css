@@ -10,7 +10,9 @@ h3 {
 #question-box-id {
   border: 1px solid black;
   margin: 5px;
-  font-size: 4rem;
+  font-size: 5rem;
+  width: auto;
+  display: inline-block;
 }
 
 .word-container {
@@ -21,6 +23,7 @@ h3 {
   height: auto;
   cursor: pointer;
   border-radius: 5px;
+  background-color: rgb(250, 247, 237);
 }
 
 .sentence-word {
@@ -33,7 +36,7 @@ h3 {
 }
 
 .right {
-  color: #3ae374;
+  color: rgb(102, 102, 235);
 }
 
 .wrong {
@@ -44,6 +47,6 @@ button {
   cursor: pointer;
 }
 
-.game-title {
+.game-title, .edit-title {
   margin: 0 20px 0 0;
 }

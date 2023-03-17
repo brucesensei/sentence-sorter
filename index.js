@@ -53,10 +53,6 @@ app.get("/game", function(req, res) {
     optionData: optionData });
 })
 
-app.post("/game", function(req, res) {
-  console.log("implements game post route.")
-})
-
 
 //----------------------------EDIT ROUTE------------------------
 

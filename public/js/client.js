@@ -171,7 +171,7 @@ function nextQuestion() {
   if (questionNumber < totalQuestions) {
     createList();
   } else {
-    questionBox.innerText = "The End";
+    questionBox.innerText = "You did it!!";
   }
 }
 
