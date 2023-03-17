@@ -60,7 +60,23 @@ app.get("/edit", function(req, res) {
 })
 
 app.post("/edit", function(req, res) {
-  console.log("implements edit post route.")
+  fs.readFile("./public/assets/game-data.json", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    const myData = JSON.parse(data);
+    myData[req.body.grade][req.body.unit][req.body.title] = req.body.question
+    const jsonString = JSON.stringify(myData, null, 2);
+    fs.writeFile("./public/assets/game-data.json", jsonString, (error) => {
+      if (error) {
+        console.log(error);
+        return;
+      }
+      console.log('Data written to disk.');
+      res.redirect("/")
+    })
+  })  
 })
 
 

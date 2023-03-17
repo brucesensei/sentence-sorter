@@ -151,6 +151,7 @@ function addEventListeners() {
 
 function showAnswer () {
   questionBox.innerHTML = sentences[questionNumber].innerText;
+  console.log(sentences[questionNumber])
 }
 
 function nextQuestion() {

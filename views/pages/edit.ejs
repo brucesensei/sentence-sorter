@@ -1,11 +1,13 @@
 <%- include('../partials/header') %>
-  <h1>Hello from the Edit view.</h1>
-  <h1><%= gameGrade %></h1>
-  <h1><%= gameUnit %></h1>
-  <h1><%= gameTitle %></h1>
-  <h1><%= optionData %></h1>
+<h1>Hello from the Edit view.</h1>
+<h1><%= gameGrade %>, <%= gameUnit %>, <%= gameTitle %></h1>
 
-
+<form action="/edit" method="post">
   <% for (i=0; i<gameData.length; i++) { %>
-    <p><%= gameData[i] %></p>
+    <input type="text" class="edit-box" name="question" value="<%= gameData[i] %>"><br>
   <% } %>
+  <input type="hidden" name="grade" value="<%= gameGrade %>">
+  <input type="hidden" name="unit" value="<%= gameUnit %>">            
+  <input type="hidden" name="title" value="<%= gameTitle %>">
+  <input type="submit" value="submit">
+</form>

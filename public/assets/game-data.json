@@ -1,49 +1,230 @@
 {
-  "grade 5": {
-    "unit 1": {
-      "quiz 1": [
+  "Grade 5": {
+    "Unit 1": {
+      "Quiz 1": [
+        "What color do you like?",
         "How do you spell your name?",
-        "My name is Emily.",
-        "I live in Kisarazu!!",
-        "I go to Midori Elementary school."
+        "What's your name?",
+        "My name is Shoma."
       ],
-      "quiz 2": [
-        "I'm fine!!",
-        "how are you?"
+      "Quiz 2": [
+        "Nice to meet you.",
+        "What sport do you like?",
+        "I like soccer.",
+        "I don't like swimming."
       ]
     },
-    "unit 2": {
-      "quiz 3": [
-        "this is a pen.",
-        "I like rice."
+    "Unit 2": {
+      "Quiz 1": [
+        "When is your birthday?",
+        "What day is it today?",
+        "What do you want?",
+        "When is New Year's Day?"
       ],
-      "quiz 4": [
-        "she is kind",
-        "what a nice day!"
+      "Quiz 2": [
+        "I want a yellow T-shirt.",
+        "What do you want for your birthday?",
+        "My birthday is May 16th.",
+        "What's the date today?"
+      ]
+    },
+    "Unit 3": {
+      "Quiz 1": [
+        "What do you want to study?",
+        "What do you want to be?",
+        "What do you have on Mondays?",
+        "What subject do you like?"
+      ],
+      "Quiz 2": [
+        "I want to study science.",
+        "I want to be a baker.",
+        "Do you like rainy days?",
+        "I have Japanese on Thursdays."
+      ]
+    },
+    "Unit 4": {
+      "Quiz 1": [
+        "He can bake bread well.",
+        "Can you cook well?",
+        "She is my sister.",
+        "He is a student."
+      ],
+      "Quiz 2": [
+        "He can't swim fast",
+        "Who is this?",
+        "This is my town.",
+        "I love my town."
+      ]
+    },
+    "Unit 5": {
+      "Quiz 1": [
+        "Where is the library?",
+        "Turn right at the first corner.",
+        "You can see it on your left.",
+        "Where is my hat?"
+      ],
+      "Quiz 2": [
+        "It's under the desk.",
+        "Go straight for two blocks.",
+        "Is this the symbol for a school?",
+        "Thank you very much."
+      ]
+    },
+    "Unit 6": {
+      "Quiz 1": [
+        "What would you like?",
+        "What food do you like?",
+        "I'd like a pizza and a salad.",
+        "How much is it?"
+      ],
+      "Quiz 2": [
+        "How much is the cake?",
+        "A hamburger is 570 yen.",
+        "How many apples do you want?",
+        "I'm a waitress in a traditional Japanese restaurant."
+      ]
+    },
+    "Unit 7": {
+      "Quiz 1": [
+        "What do you do on New Year's Day?",
+        "Why do you like winter?",
+        "I usually play karuta.",
+        "We have fireworks in summer."
+      ],
+      "Quiz 2": [
+        "What season do you like?",
+        "You can see beautiful dolls.",
+        "I usually throw beans.",
+        "Do you like Kabuki?."
+      ]
+    },
+    "Unit 8": {
+      "Quiz 1": [
+        "What housework do you usually do?",
+        "Who is your hero?",
+        "Why is he your hero?",
+        "My mother is my hero."
+      ],
+      "Quiz 2": [
+        "I never go to bed at seven.",
+        "I always wash the dishes.",
+        "I usually walk my dog.",
+        "He is always kind to me."
       ]
     }
   },
   "Grade 6": {
     "Unit 1": {
       "Quiz 1": [
-        "How do you spell your name?",
-        "What do you want for your birthday?",
-        "I want a yellow T-shirt.",
-        "What sport do you like?"
+        "My name is Emily.",
+        "I'm from Singapore.",
+        "I like dogs.",
+        "My birthday is May 10th."
       ],
       "Quiz 2": [
-        "I'm great.",
-        "how's the weather?"
+        "Where are you from?",
+        "What is your favorite animal?",
+        "When is your birthday?",
+        "I can kick well."
       ]
     },
     "Unit 2": {
       "Quiz 1": [
-        "What is this?",
-        "I like soccer."],
+        "I live in Kisarazu in Japan.",
+        "I go to Naka Elementary School.",
+        "I usually watch soccer games on Sundays.",
+        "My treasure is this soccer ball."
+      ],
       "Quiz 2": [
-        "I'm from Canada.",
-        "Why does it display each character as a separate entry?"
+        "What time do you usually go to bed on Sundays?",
+        "How do you come to school?",
+        "Where do you live?",
+        "What do you usually do on Sundays?"
+      ]
+    },
+    "Unit 3": {
+      "Quiz 1": [
+        "Italy is a nice country.",
+        "You can see the colosseum.",
+        "You can eat pizza.",
+        "You can buy olive oil."
+      ],
+      "Quiz 2": [
+        "Where do you want to go?",
+        "Why do you like Japan?",
+        "What can you do in Japan?",
+        "What do you want to eat?"
+      ]
+    },
+    "Unit 4": {
+      "Quiz 1": [
+        "I went to the mountains.",
+        "I enjoyed camping.",
+        "I ate curry and rice.",
+        "It was great."
+      ],
+      "Quiz 2": [
+        "Where did you go this summer?",
+        "We love summer vacation.",
+        "Did you enjoy camping?",
+        "What did you eat?"
+      ]
+    },
+    "Unit 5": {
+      "Quiz 1": [
+        "Where do lions live?",
+        "What do eagles eat?",
+        "frogs live in the wetlands.",
+        "Lions eat zebras."
+      ],
+      "Quiz 2": [
+        "What animals can you see in the forest?",
+        "What can penguins do well?",
+        "Tigers can run fast.",
+        "sea turtles live in the sea."
+      ]
+    },
+    "Unit 6": {
+      "Quiz 1": [
+        "I ate pasta last night.",
+        "I usually eat rice for breakfast.",
+        "The tomatoes are from Kumamoto.",
+        "The eggplant is in the green group."
+      ],
+      "Quiz 2": [
+        "What do you usually eat for breakfast?",
+        "What did you eat for dinner?",
+        "Where is the pork from?",
+        "How much is it?"
+      ]
+    },
+    "Unit 7": {
+      "Quiz 1": [
+        "My best memory is your school trip.",
+        "We went to Hakone in September.",
+        "We saw many temples.",
+        "I enjoyed talking with my friends."
+      ],
+      "Quiz 2": [
+        "Did you enjoy sports day?",
+        "What is your best memory?",
+        "Was the game exciting?",
+        "What did you see on your school trip?"
+      ]
+    },
+    "Unit 8": {
+      "Quiz 1": [
+        "I want to join the basketball team.",
+        "I want to enjoy sports day.",
+        "I'm good at kicking a ball.",
+        "I want to be a scientist."
+      ],
+      "Quiz 2": [
+        "What club do you want to join?",
+        "What do you want to do?",
+        "What subject do you want to study?",
+        "This was my favorite class."
       ]
     }
   }
-}
+}  
