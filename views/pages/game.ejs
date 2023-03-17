@@ -6,9 +6,12 @@
     <p class="sentences"><%= gameData[i] %></p>
     <% } %>
 </div>
-<h1>Sentence Scramble Game</h1>
-<h1><%= gameGrade %>, <%= gameUnit %>, <%= gameTitle %></h1>
-<h2>Question <span id="question-number"></span> of <span id="total-questions"></span>.</h2>
+<h1>
+  <span class="game-title"><%= gameGrade %></span>
+  <span class="game-title"><%= gameUnit %></span>
+  <span class="game-title"><%= gameTitle %></span>
+</h1>
+<h2>Question <span id="question-number"></span> of <span id="total-questions"></span></h2>
 <div id="question-box-id"></div>
 <button id="check">Check Answer</button>
 <button id="show">Show Answer</button>

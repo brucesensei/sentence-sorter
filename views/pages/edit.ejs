@@ -4,7 +4,16 @@
 
 <form action="/edit" method="post">
   <% for (i=0; i<gameData.length; i++) { %>
-    <input type="text" class="edit-box" name="question" value="<%= gameData[i] %>"><br>
+    <input 
+    type="text"
+    class="edit-box"
+    name="question"
+    value="<%= gameData[i] %>"
+    size="100"
+    minlength="4"
+    maxlength="100"
+    autocomplete="off"
+    required><br>
   <% } %>
   <input type="hidden" name="grade" value="<%= gameGrade %>">
   <input type="hidden" name="unit" value="<%= gameUnit %>">            

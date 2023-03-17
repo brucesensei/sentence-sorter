@@ -3,6 +3,7 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const app = express();
 
+let punctuation = '';
 let gameGrade = '';
 let gameUnit = '';
 let gameTitle = '';
@@ -12,6 +13,9 @@ let gameData = [];
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
+
+
+//--------------------HOME ROUTE-------------------------------
 
 app.get("/", function(req, res) {
   fs.readFile("./public/assets/game-data.json", "utf8", (err, data) => {
@@ -37,6 +41,9 @@ app.post("/", function(req, res) {
   }
 })
 
+
+//------------------------------GAME ROUTE---------------------
+
 app.get("/game", function(req, res) {
   res.render("pages/game", {
     gameTitle: gameTitle,
@@ -49,6 +56,9 @@ app.get("/game", function(req, res) {
 app.post("/game", function(req, res) {
   console.log("implements game post route.")
 })
+
+
+//----------------------------EDIT ROUTE------------------------
 
 app.get("/edit", function(req, res) {
   res.render("pages/edit", {
@@ -79,6 +89,8 @@ app.post("/edit", function(req, res) {
   })  
 })
 
+
+//-------------------------------APP PORT-----------------------------
 
 app.listen(process.env.PORT || 3000, function() {
   console.log('server running on port 3000')

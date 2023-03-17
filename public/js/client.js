@@ -37,12 +37,20 @@ let questionNumber = 0;
 
 for (i=0; i<sentences.length; i++) {
   // hold the value of one sentence, change it to lower case and strip off punctuation.
-  let sentenceString = sentences[i]
-  .innerHTML
-  .toLowerCase()
-  .replace(/[.?!]/g, "");
+  let sentenceString = sentences[i].innerHTML.toLowerCase();
+  console.log(sentenceString)
+  if (sentenceString.includes('.') || sentenceString.includes('!') || sentenceString.includes('?')) {
+    var punctuation = sentenceString.slice(sentenceString.length -1);
+  }
+  let strippedString = sentenceString.replace(/[.?!]/g, "");
+  console.log(strippedString)
+  
   // split each sentence into an array of words and append it to validationArrays.
-  let validationArray = sentenceString.split(" ");
+  let validationArray = strippedString.split(" ");
+  if (punctuation) {
+    validationArray.push(punctuation);
+    punctuation = '';
+  }
   validationArrays.push(validationArray);
 }
 
