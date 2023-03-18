@@ -1,6 +1,9 @@
 {
   "name": "sentence-scramble",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=v18.12.1"
+  },
   "description": "Put scrambled sentences in the correct order.",
   "main": "index.js",
   "scripts": {

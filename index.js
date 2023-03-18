@@ -1,7 +1,9 @@
 const express = require("express");
 const fs = require("fs");
+const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const app = express();
+
 
 let gameGrade = '';
 let gameUnit = '';
@@ -10,6 +12,7 @@ let optionData = '';
 let gameData = [];
 
 app.set("view engine", "ejs");
+app.use(helmet());
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
