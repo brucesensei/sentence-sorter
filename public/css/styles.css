@@ -7,13 +7,17 @@ h3 {
   padding-right: 10px;
 }
 
-#question-box-id {
-  border: 1px solid black;
+#question-box-id {  
   margin: 5px;
   font-size: 5rem;
   width: auto;
   display: inline-block;
 }
+
+.border-style {
+  border: 1px solid black;
+}
+
 
 .word-container {
   display: inline-block;
@@ -49,4 +53,14 @@ button {
 
 .game-title, .edit-title {
   margin: 0 20px 0 0;
+}
+
+
+.edit-box {
+  margin: 5px;
+  font-size: 1.5rem;
+}
+
+.grade {
+  font-size: 3rem;
 }

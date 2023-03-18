@@ -3,7 +3,6 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const app = express();
 
-let punctuation = '';
 let gameGrade = '';
 let gameUnit = '';
 let gameTitle = '';
@@ -84,6 +83,7 @@ app.post("/edit", function(req, res) {
     })
   })  
 })
+
 
 
 //-------------------------------APP PORT-----------------------------

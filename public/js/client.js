@@ -172,6 +172,7 @@ function nextQuestion() {
     createList();
   } else {
     questionBox.innerText = "You did it!!";
+    questionBox.classList.remove('border-style');
   }
 }
 
