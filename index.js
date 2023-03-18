@@ -11,10 +11,10 @@ let gameTitle = '';
 let optionData = '';
 let gameData = [];
 
-app.set("view engine", "ejs");
 app.use(helmet());
+app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //--------------------HOME ROUTE-------------------------------
@@ -91,6 +91,6 @@ app.post("/edit", function(req, res) {
 
 //-------------------------------APP PORT-----------------------------
 
-app.listen(PORT || 3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log('server running on port 3000')
 })

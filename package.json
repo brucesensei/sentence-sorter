@@ -5,7 +5,7 @@
     "node": ">=v18.12.1"
   },
   "description": "Put scrambled sentences in the correct order.",
-  "main": "index.js",
+  "main": "node index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
